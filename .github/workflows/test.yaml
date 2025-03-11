@@ -33,9 +33,9 @@ jobs:
       - name: Install dependencies (Windows)
         if: runner.os == 'Windows'
         run: |
-          mkdir C:\hio\test
-          mkdir C:\hio\logs
-          mkdir C:\hio\wirelogs
+          mkdir C:\usr\local\var\hio\test
+          mkdir C:\usr\local\var\hio\logs
+          mkdir C:\usr\local\var\hio\wirelogs
           python -m pip install --upgrade pip
           pip install pytest
           if (Test-Path requirements.txt) { pip install -r requirements.txt }
